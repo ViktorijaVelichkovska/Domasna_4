@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+.nav {
+    width: 86%;
+    margin: 2vh auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1; /* Осигурај рамномерно ширење */
+}
+
+.pages {
+    display: flex;
+}
+
+.pages li {
+    margin-left: 1rem;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Потребно за позиционирање на псевдо-елементот */
+    transition: color 0.3s ease; /* Лесен премин за бојата на текстот */
+}
+
+.pages a {
+    color: white;
+    text-decoration: none; /* Отстрани underline */
+    font-size: 2.1vh;
+    transition: background-color 0.1s ease;
+    padding: 0.8em 1em;
+    display: inline-block; /* Осигурај дека линковите се inline-block */
+}
+
+
+/* Додавање underline за линкови */
+.pages a::after {
+    content: ""; /* Празен псевдо-елемент */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #742CD8;
+    transform: scaleX(0); /* Почетно е скриен underline */
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+/* Покажи underline при hover или кога линкот е активен */
+.pages a:hover::after,
+.pages a.active::after {
+    transform: scaleX(1); /* Прикажи underline */
+}
+
+.pages a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Линијата е секогаш со истата ширина како копчето */
+}
+
+.pages a.active {
+    color: #3c096c; /* Боја на текст за активен линк */
+    background-color: #e0aaff; /* Позадинска боја за активен линк */
+    transition: background-color 0.3s ease; /* Лесен премин за позадинската боја */
+}

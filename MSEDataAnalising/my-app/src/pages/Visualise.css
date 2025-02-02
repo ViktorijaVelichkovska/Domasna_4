@@ -1,0 +1,18 @@
+#vis-container {
+    margin-top: 20vh;
+}
+
+#vis-container #vis-above {
+    padding-left: 4rem;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 2rem;
+}
+
+#vis-bellow {
+    margin-bottom: 3rem;
+}
+#vis-bellow h1 {
+    margin-top: 2rem;
+
+}

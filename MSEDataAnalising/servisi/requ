@@ -1,0 +1,14 @@
+Django==3.1.3
+djangorestframework==3.12.2
+mysqlclient==2.0.1
+django-mysql==3.9
+django-cors-headers==3.5.0
+pika==1.1.0
+joblib
+ta
+statsmodels
+pandas==2.2.2
+tensorflow-cpu==2.18.0
+scikit-learn==1.0.2
+matplotlib==3.4.3
+numpy==1.26.4
